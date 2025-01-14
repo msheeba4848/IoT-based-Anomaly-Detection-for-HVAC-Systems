@@ -1,0 +1,83 @@
+@prefix bldg: <bldg-59#> .
+@prefix brick: <https://brickschema.org/schema/Brick#> .
+
+bldg:Simulated_Boiler_Plant a brick:Hot_Water_System ;
+    brick:hasPart bldg:Boiler_1,
+        bldg:Boiler_2,
+        bldg:Pump_1,
+        bldg:Pump_2 ;
+    brick:hasPoint bldg:HWL_DP,
+        bldg:HWL_DPSPT,
+        bldg:HWL_RW_TEMP,
+        bldg:HWL_SW_TEMP,
+        bldg:OA_TEMP,
+        bldg:SEC_POW .
+
+bldg:BOI_FLOW_1 a brick:Hot_Water_Flow_Sensor .
+
+bldg:BOI_FLOW_2 a brick:Hot_Water_Flow_Sensor .
+
+bldg:BOI_GAS_CSUM_1 a brick:Gas_Meter .
+
+bldg:BOI_GAS_CSUM_2 a brick:Gas_Meter .
+
+bldg:BOI_RW_TEMP_1 a brick:Hot_Water_Return_Temperature_Sensor .
+
+bldg:BOI_RW_TEMP_2 a brick:Hot_Water_Return_Temperature_Sensor .
+
+bldg:BOI_STA_1 a brick:On_Off_Status .
+
+bldg:BOI_STA_2 a brick:On_Off_Status .
+
+bldg:BOI_SW_TEMP_1 a brick:Hot_Water_Supply_Temperature_Sensor .
+
+bldg:BOI_SW_TEMP_2 a brick:Hot_Water_Supply_Temperature_Sensor .
+
+bldg:Boiler_1 a brick:Natural_Gas_Boiler ;
+    brick:hasPoint bldg:BOI_FLOW_1,
+        bldg:BOI_GAS_CSUM_1,
+        bldg:BOI_RW_TEMP_1,
+        bldg:BOI_STA_1,
+        bldg:BOI_SW_TEMP_1 .
+
+bldg:Boiler_2 a brick:Natural_Gas_Boiler ;
+    brick:hasPoint bldg:BOI_FLOW_2,
+        bldg:BOI_GAS_CSUM_2,
+        bldg:BOI_RW_TEMP_2,
+        bldg:BOI_STA_2,
+        bldg:BOI_SW_TEMP_2 .
+
+bldg:HWL_DP a brick:Hot_Water_Differential_Pressure_Sensor .
+
+bldg:HWL_DPSPT a brick:Hot_Water_Differential_Pressure_Setpoint .
+
+bldg:HWL_RW_TEMP a brick:Hot_Water_Return_Temperature_Sensor .
+
+bldg:HWL_SW_TEMP a brick:Hot_Water_Supply_Temperature_Sensor .
+
+bldg:OA_TEMP a brick:Outside_Air_Temperature_Sensor .
+
+bldg:PM_POW_1 a brick:Electrical_Power_Sensor .
+
+bldg:PM_POW_2 a brick:Electrical_Power_Sensor .
+
+bldg:PM_SPD_1 a brick:Speed_Status .
+
+bldg:PM_SPD_2 a brick:Speed_Status .
+
+bldg:PM_STA_1 a brick:Pump_On_Off_Status .
+
+bldg:PM_STA_2 a brick:Pump_On_Off_Status .
+
+bldg:Pump_1 a brick:Hot_Water_Pump ;
+    brick:hasPoint bldg:PM_POW_1,
+        bldg:PM_SPD_1,
+        bldg:PM_STA_1 .
+
+bldg:Pump_2 a brick:Hot_Water_Pump ;
+    brick:hasPoint bldg:PM_POW_2,
+        bldg:PM_SPD_2,
+        bldg:PM_STA_2 .
+
+bldg:SEC_POW a brick:Heating_Demand_Sensor .
+
